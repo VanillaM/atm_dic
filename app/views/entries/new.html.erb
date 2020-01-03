@@ -1,0 +1,17 @@
+<% provide(:title, 'New Entry') %>
+<h1>New Entry</h1>
+<div class="row"> 
+    <div class="col-md-6 col-md-offset-3"> 
+        <%= form_with(model: @entry, local: true) do |f| %> 
+            <%= f.label :中文名 %> 
+            <%= f.text_field :zhname, class: 'form-control' %>
+            <%= f.label :英文名 %> 
+            <%= f.email_field :enname, class: 'form-control' %>
+            <%= f.label :释义 %> 
+            <%= f.password_field :interpretation, class: 'form-control' %>
+            <%= f.label :用户ID  %> 
+            <%= f.password_field :user_id, class: 'form-control' %>
+            <%= f.submit "Add new entry into my dictionary", class: "btn btn-primary" %> 
+        <% end %> 
+    </div> 
+</div> 
